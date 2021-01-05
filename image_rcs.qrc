@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="image">
+    <file>src/image/import_button.png</file>
+    <file>src/image/upload.png</file>
+  </qresource>
+</RCC>
