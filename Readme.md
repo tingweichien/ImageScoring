@@ -1,4 +1,4 @@
-# Picture Scoring
+# Image Scoring
 
 ## Intoduce
 
