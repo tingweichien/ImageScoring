@@ -14,8 +14,8 @@
    <string>Image Scoring</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -23,8 +23,8 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="Import_Page" native="true">
-       <widget class="QFrame" name="frame">
+      <widget class="QWidget" name="Import_Page">
+       <widget class="QWidget" name="import_page_widget" native="true">
         <property name="geometry">
          <rect>
           <x>320</x>
@@ -32,12 +32,6 @@
           <width>391</width>
           <height>248</height>
          </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
@@ -95,82 +89,70 @@
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="Result_Page" native="true">
-       <widget class="QFrame" name="image_result_frame">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>140</y>
-          <width>251</width>
-          <height>331</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QLabel" name="import_image_label">
+      <widget class="QWidget" name="Result_Page">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="upper_frame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>1019</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1019</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="Export_button">
+           <property name="geometry">
+            <rect>
+             <x>830</x>
+             <y>10</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Image&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Export</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <widget class="QTableWidget" name="result_table">
-           <row>
-            <property name="text">
-             <string>Stock photo scoring</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>UGC photo scoring</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>Image keyword</string>
-            </property>
-           </row>
-           <column>
-            <property name="text">
-             <string>image 1</string>
-            </property>
-           </column>
+          <widget class="QPushButton" name="return_button">
+           <property name="geometry">
+            <rect>
+             <x>920</x>
+             <y>10</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
           </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QPushButton" name="return_button">
-        <property name="geometry">
-         <rect>
-          <x>930</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>return</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="Export_button">
-        <property name="geometry">
-         <rect>
-          <x>840</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Export</string>
-        </property>
-       </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="lower_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
